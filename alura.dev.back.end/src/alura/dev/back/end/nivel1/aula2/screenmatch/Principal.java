@@ -1,5 +1,7 @@
 package alura.dev.back.end.nivel1.aula2.screenmatch;
 
+import alura.dev.back.end.nivel1.aula2.screenmatch.modelos.Filme;
+
 public class Principal {
 
 	public static void main(String[] args) {
@@ -7,9 +9,10 @@ public class Principal {
 		
 		Filme meuFilme = new Filme();
 		
-		meuFilme.nome = "O poderoso chefão";
-		meuFilme.anoDeLancamento = 1978;
-		meuFilme.duracaoEmMinutos = 180;
+		meuFilme.setNome("O poderoso chefão");
+		meuFilme.setAnoDeLancamento(1970);
+		meuFilme.setDuracaoEmMinutos(180);
+		
 		
 		meuFilme.exibeFichaTecnica();
 		
@@ -17,9 +20,9 @@ public class Principal {
 		meuFilme.avalia(5);
 		meuFilme.avalia(10);
 		
-		System.out.println(meuFilme.somaDasAvaliacoes);
-		System.out.println(meuFilme.totalDeAvaliacao);
-		System.out.println(meuFilme.pegaMedia());
+		System.out.println("Total de avaliações: "+meuFilme.getTotalDeAvaliacoes());
+		//System.out.println(meuFilme.totalDeAvaliacao);
+		System.out.println("Média de avaliações do filme: "+meuFilme.pegaMedia());
 	}
 
 }
