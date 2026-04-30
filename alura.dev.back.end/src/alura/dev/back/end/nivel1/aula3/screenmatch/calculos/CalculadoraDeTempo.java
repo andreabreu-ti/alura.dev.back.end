@@ -1,6 +1,6 @@
 package alura.dev.back.end.nivel1.aula3.screenmatch.calculos;
 
-import alura.dev.back.end.nivel1.aula2.screenmatch.modelos.Titulo;
+import alura.dev.back.end.nivel1.aula3.screenmatch.modelo.Titulo;
 
 public class CalculadoraDeTempo {
 
