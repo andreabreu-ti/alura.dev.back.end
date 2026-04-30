@@ -1,6 +1,8 @@
 package alura.dev.back.end.nivel1.aula3.screenmatch.principal;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 import alura.dev.back.end.nivel1.aula3.screenmatch.modelo.Filme;
 import alura.dev.back.end.nivel1.aula3.screenmatch.modelo.Serie;
@@ -17,8 +19,6 @@ public class PrincipalComListas {
 		var filmeDoPaulo = new Filme("Dogville", 2003);
 		filmeDoPaulo.avalia(10);
 		Serie lost = new Serie("Lost", 2000);
-		
-		Filme f1 = filmeDoPaulo;
 
 		ArrayList<Titulo> lista = new ArrayList<>();
 		lista.add(filmeDoPaulo);
@@ -36,6 +36,26 @@ public class PrincipalComListas {
 			}
 
 		}
+
+		ArrayList<String> buscaPorArtista = new ArrayList<String>();
+		buscaPorArtista.add("Adam Sandler");
+		buscaPorArtista.add("Mia Kalifa");
+		buscaPorArtista.add("Elisa Ibarra");
+
+		System.out.println(buscaPorArtista);
+
+		Collections.sort(buscaPorArtista);
+		System.out.println("Depois da ordenação");
+		System.out.println(buscaPorArtista);
+
+		System.out.println("Lista de títulos ordenação");
+		Collections.sort(lista);
+		System.out.println(lista);
+		
+		lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
+		System.out.println("Ordenação por ano");
+		System.out.println(lista);
+		
 
 	}
 
