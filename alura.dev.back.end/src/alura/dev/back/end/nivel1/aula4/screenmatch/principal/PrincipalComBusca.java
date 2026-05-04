@@ -11,7 +11,7 @@ import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import alura.dev.back.end.nivel1.aula2.screenmatch.modelos.Titulo;
+import alura.dev.back.end.nivel1.aula4.screenmatch.modelo.Titulo;
 import alura.dev.back.end.nivel1.aula4.screenmatch.modelo.TituloOmdb;
 
 public class PrincipalComBusca {
@@ -43,9 +43,16 @@ public class PrincipalComBusca {
 		System.out.println(meuTituloOmdb);
 		
 		
-		Titulo meuTitulo = new Titulo(meuTituloOmdb);
-		System.out.println("Titulo já convertido");
-		System.out.println(meuTitulo);
-
+		try {
+			
+			Titulo meuTitulo = new Titulo(meuTituloOmdb);
+			System.out.println("Titulo já convertido");
+			System.out.println(meuTitulo);
+		} catch (NumberFormatException e) {
+			
+			System.out.println("Aconteceu um erro: "+e.getMessage());
+		}
+		
+		System.out.println("O programa finalizou corretamente;");
 	}
 }
