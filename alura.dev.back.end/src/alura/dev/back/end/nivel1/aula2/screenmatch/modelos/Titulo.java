@@ -1,5 +1,7 @@
 package alura.dev.back.end.nivel1.aula2.screenmatch.modelos;
 
+import alura.dev.back.end.nivel1.aula4.screenmatch.modelo.TituloOmdb;
+
 public class Titulo {
 
 	private String nome;
@@ -8,6 +10,14 @@ public class Titulo {
 	private double somaDasAvaliacoes;
 	private int totalDeAvaliacao;
 	private int duracaoEmMinutos;
+
+	public Titulo(TituloOmdb meuTituloOmdb) {
+		
+		this.nome = meuTituloOmdb.title();
+		this.anoDeLancamento = Integer.valueOf(meuTituloOmdb.year());
+		this.duracaoEmMinutos = Integer.valueOf(meuTituloOmdb.runtime().substring(0,2));
+		
+	}
 
 	public String getNome() {
 		return nome;

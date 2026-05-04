@@ -7,9 +7,12 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.Scanner;
 
+import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
-import alura.dev.back.end.nivel1.aula4.screenmatch.modelo.Titulo;
+import alura.dev.back.end.nivel1.aula2.screenmatch.modelos.Titulo;
+import alura.dev.back.end.nivel1.aula4.screenmatch.modelo.TituloOmdb;
 
 public class PrincipalComBusca {
 
@@ -30,12 +33,18 @@ public class PrincipalComBusca {
 		HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 		
 		String json = response.body();
-		
 		System.out.println(json);
 		
-		Gson gson = new Gson();
-		Titulo meuTitulo = gson.fromJson(json, Titulo.class);
+		Gson gson = new GsonBuilder()
+				.setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+				.create();
 		
+		TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
+		System.out.println(meuTituloOmdb);
+		
+		
+		Titulo meuTitulo = new Titulo(meuTituloOmdb);
+		System.out.println("Titulo já convertido");
 		System.out.println(meuTitulo);
 
 	}

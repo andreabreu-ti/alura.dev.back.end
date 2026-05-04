@@ -64,10 +64,10 @@ public class Titulo implements Comparable<Titulo>{
 	
 	
 
-	@Override
-	public String toString() {
-		return "Titulo [nome=" + nome + ", anoDeLancamento=" + anoDeLancamento + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "Titulo [nome=" + nome + ", anoDeLancamento=" + anoDeLancamento + "], Duração: "+duracaoEmMinutos;
+//	}
 
 	public void avalia(double nota) {
 
