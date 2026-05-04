@@ -1,9 +1,15 @@
 package alura.dev.back.end.nivel1.aula4.screenmatch.modelo;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Titulo implements Comparable<Titulo>{
 
+	@SerializedName("Title")
 	private String nome;
+	
+	@SerializedName("Year")
 	private int anoDeLancamento;
+	
 	private boolean incluidoNoPlano;
 	private double somaDasAvaliacoes;
 	private int totalDeAvaliacao;
@@ -54,6 +60,13 @@ public class Titulo implements Comparable<Titulo>{
 
 		System.out.println("Nome do Filme: " + nome);
 		System.out.println("Ano de Lançamento: " + anoDeLancamento);
+	}
+	
+	
+
+	@Override
+	public String toString() {
+		return "Titulo [nome=" + nome + ", anoDeLancamento=" + anoDeLancamento + "]";
 	}
 
 	public void avalia(double nota) {
