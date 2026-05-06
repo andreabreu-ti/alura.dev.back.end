@@ -1,6 +1,6 @@
 package alura.dev.back.end.nivel1.aula12;
 
-public class Principal {
+public class PrincipalStrings {
 
     public static void main(String[] args) {
 
