@@ -30,7 +30,7 @@ public class Funcionario {
 
 	public void exibirInformacoes() {
 
-		System.out.printf("\nFuncionário %s - Cargo: %s - Salário: %.2f", nome, cargo, salario);
+		System.out.printf("\nFuncionário %s - Salário: %.2f", nome, salario);
 	}
 
 	public void reajustarSalario(double percentual) {
