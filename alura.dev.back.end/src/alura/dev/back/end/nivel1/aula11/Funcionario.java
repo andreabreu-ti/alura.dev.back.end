@@ -2,9 +2,9 @@ package alura.dev.back.end.nivel1.aula11;
 
 public class Funcionario {
 
-	private String nome;
+	protected String nome;
 	private String cargo;
-	private double salario;
+	protected double salario;
 	private int controleReajuste = 0;
 
 	public Funcionario(String nome, double salario) {
@@ -44,5 +44,11 @@ public class Funcionario {
 			salario += salario * (percentual / 100);
 			System.out.printf("\nNovo salário de %s é de %.2f", nome, salario);
 		}
+	}
+	
+	public void reajustarSalario() {
+		
+		salario += 500;
+		System.out.printf("\nSalário com dissidio de %s é de %.2f", nome, salario);
 	}
 }
