@@ -1,6 +1,6 @@
 package alura.dev.back.end.nivel1.aula11;
 
-public class Funcionario {
+public abstract class Funcionario {
 
 	protected String nome;
 	private String cargo;
@@ -51,4 +51,11 @@ public class Funcionario {
 		salario += 500;
 		System.out.printf("\nSalário com dissidio de %s é de %.2f", nome, salario);
 	}
+	
+	public abstract void calcularPLR();
+	
+	
+	
+	
+	
 }

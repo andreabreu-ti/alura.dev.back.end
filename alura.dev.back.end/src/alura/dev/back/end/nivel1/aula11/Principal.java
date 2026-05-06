@@ -8,9 +8,12 @@ public class Principal {
 		((Gerente) gerente).setBonus(1000);
 		gerente.exibirInformacoes();
 		gerente.reajustarSalario(2);
+		((Gerente) gerente).aprovarProjeto("uso de IA nos códigos Java");;
 
 		Funcionario desenvolvedor = new Desenvolvedor("Carla", 12000, "Backend Java");
 		desenvolvedor.reajustarSalario();
 		desenvolvedor.exibirInformacoes();
+		
+
 	}
 }
