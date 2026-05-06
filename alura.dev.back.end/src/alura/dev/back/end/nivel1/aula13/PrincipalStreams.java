@@ -3,8 +3,6 @@ package alura.dev.back.end.nivel1.aula13;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.w3c.dom.ls.LSInput;
-
 public class PrincipalStreams {
 
 	public static void main(String[] args) {
