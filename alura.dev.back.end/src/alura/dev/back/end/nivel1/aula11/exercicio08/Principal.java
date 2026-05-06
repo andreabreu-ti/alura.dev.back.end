@@ -1,4 +1,4 @@
-package alura.dev.back.end.nivel1.aula11.exercicios08;
+package alura.dev.back.end.nivel1.aula11.exercicio08;
 
 public class Principal {
 
